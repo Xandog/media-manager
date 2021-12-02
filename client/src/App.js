@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+//useEffect
+//import {Route, useHistory } from "react-router-dom";
+
+import NavBar from "./NavBar";
+import AccountPrompt from "./AccountPrompt";
+import ProfileView from "./ProfileView";
+import MainView from "./MainView";
+
 
 function App() {
+  const [user, setUser] = useState(null);
+  
+
+  // //Auto-login
+  // useEffect(() => {
+  //   fetch("/me").then((response) => {
+  //     if (response.ok) {
+  //       response.json().then((user) => setUser(user));
+  //     }
+  //   });
+  // }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar 
+        user={user}
+        setUser={setUser}
+      />
+      {!user ? (
+        <AccountPrompt
+        user={user}
+        setUser={setUser}
+        />
+      ) : (
+        <>
+          <ProfileView/>
+          <MainView/>
+        </>
+      )}
     </div>
   );
 }
