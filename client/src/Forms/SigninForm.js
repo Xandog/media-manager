@@ -19,9 +19,11 @@ function SigninForm({ setUser }) {
     }).then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user));
+      } else {
+        console.log(response);
       }
     });
-  }
+  };
 
   return (
     <div className="form">

@@ -16,6 +16,13 @@ class UsersController < ApplicationController
         end
     end
 
+    # PATCH /users/:id
+    def update
+        user = User.find_by(id:params[:id])
+        user.update(user_params)
+        render json: user, status: :accepted
+    end
+
     # GET /users
     def index 
         users = User.all
@@ -39,7 +46,7 @@ class UsersController < ApplicationController
     end
 
     def render_not_found_response
-        render json: { error: "recipe not found" }, status: :not_found
+        render json: { error: "user not found" }, status: :not_found
       end
 
     def render_unprocessable_entity(invalid)

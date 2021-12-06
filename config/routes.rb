@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   #User routes
   post '/signup', to: 'users#create'
+  patch '/users/:id', to: 'users#update'
   get '/me', to: 'users#show'
   get '/users', to: 'users#index'
 

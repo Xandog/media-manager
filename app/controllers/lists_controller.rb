@@ -27,7 +27,7 @@ class ListsController < ApplicationController
     def update
         list = find_list
         list.update(list_params)
-        render json: list
+        render json: list, status: :accepted
     end
 
     # DELETE /lists/:id
@@ -59,11 +59,3 @@ class ListsController < ApplicationController
         return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
     end
 end
-
-
-# PATCH /list/:id/like
-    #   def increment_likes
-    #     list = find_list
-    #     list.update(likes: list.likes + 1)
-    #     render json: list
-    #   end

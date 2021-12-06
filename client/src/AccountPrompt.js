@@ -2,14 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 
 
-import SignupForm from './SignupForm';
-import SigninForm from './SigninForm';
+import SignupForm from './Forms/SignupForm';
+import SigninForm from './Forms/SigninForm';
 
 function AccountPrompt({ setUser }) {
   const [formToggle, setFormToggle] = useState(true)
 
   return (
-    <div>
+    <div className="AccountPrompt">
       {formToggle? <p>Already have an account?</p> : <p>Need to create an account?</p>}
       
       <button onClick={() => setFormToggle(!formToggle)}>
