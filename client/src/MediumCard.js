@@ -20,15 +20,14 @@ function MediumCard({ medium, setSelectedMedium, setFormView, setFormFilter }) {
 
     return (
         <div className="mediumCard">
+            <p id="cardTypeM">{medium.medium_type}</p>
             <img 
                 className="mediumImage" 
                 src={medium.image} 
-                style={{width: "150px", height: "200px"}} 
                 alt={medium.title}
             />
             <h3>{medium.title}</h3>
             <p>{medium.studio}</p>
-            <p>{medium.medium_type}</p>
             <button className="cardButton" id="medButtonE" onClick={() => {
                 setFormView(true)
                 setFormFilter("PATCH_MEDIUM")

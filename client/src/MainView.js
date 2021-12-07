@@ -101,7 +101,7 @@ function MainView({ user, setFormView, setFormFilter, selectedList, setSelectedL
                                 setFormFilter={setFormFilter}
                             />
                         })}
-                        <div  id="createButtonM" onClick={() => {
+                        <div id="createButtonM" onClick={() => {
                             setFormView(true)
                             setFormFilter("CREATE_MEDIUM")
                         }}>
