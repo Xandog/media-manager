@@ -35,11 +35,22 @@ function ListCard({ list, setSelectedList, setListView, setMedia, setFormView, s
         });
     };
 
+    function emojiFilter(filter){
+        
+        switch(filter){
+            case "MOVIES":
+                return <p>🎬</p>;
+            case "SHOWS":
+                return <p>📺</p>;
+            case "GAMES":
+                return <p>🎮</p>;
+        };
+    };
 
     return (
         <div className="listCard" onClick={handleSelect}>
             <h3>{list.title}</h3>
-            <p>{list.list_type}</p>
+            {emojiFilter(list.list_type)}
             <button className="cardButton" onClick={() => {
                 setFormView(true)
                 setFormFilter("PATCH_LIST")
@@ -52,3 +63,4 @@ function ListCard({ list, setSelectedList, setListView, setMedia, setFormView, s
 }
 
 export default ListCard
+//📽🕹🎞🎥🎦🎬📺🎮

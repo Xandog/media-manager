@@ -1,8 +1,28 @@
 /*---------------------------------APP----------------------------------------------*/
+
+
 body{
     background-color: grey;
 }
+
+button:hover{
+    background-color: red;
+    color: white;
+}
+
+input[type=submit]:hover{
+    background-color: red;
+    color: white;
+}
+
+
+
+
+
+
 /*---------------------------------NAVBAR-------------------------------------------*/
+
+
 .NavBar {
     z-index: 1;
     background-color: rgb(28, 28, 28);
@@ -41,8 +61,11 @@ body{
 }
 
 .navButton{
+    position: absolute;
+    left: 90%;
+    top: 15%;
     margin: 1rem;
-    padding: 10px;
+    padding: 5px;
 
     font-size: 1rem;
     font-family: 'Outfit', sans-serif;
@@ -50,31 +73,418 @@ body{
     display: inline-block;
     background-color: rgb(28, 28, 28);
     border: 3px solid red;
+    border-radius: 3px;
     text-decoration: none;
     color: red;
     cursor: pointer;
 }
-/*---------------------------------ACCOUNTPROMT-------------------------------------*/
-.AccountPrompt{
-    /* border-radius: 5px;
-    padding: 20px;
-    margin: 10% 30% 10% 30%; */
 
-    /* background-color: rgb(28, 28, 28); */
-    background-color: white;
+
+
+
+
+
+/*---------------------------------ACCOUNTPROMT-------------------------------------*/
+
+
+.AccountPrompt{
+    position: relative;
 }
 
 div.AccountPrompt p{
-    /* position: relative;
-    margin: 10% 30% 10% 30%; */
+    position:relative;
+    top: 225px;
+    bottom: 100px;
+    left: 620px;
+    right: 500px;
 
     font-family: 'Outfit', sans-serif;
     font-weight: 900;
     color: red;
 }
+
+div.AccountPrompt button{
+    position: relative;
+    top: 215px;
+    bottom: 100px;
+    left: 700px;
+    right: 500px;
+
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    display: inline-block;
+    background-color: rgb(28, 28, 28);
+    border: 3px solid red;
+    border-radius: 3px;
+    padding: 5px;
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+div.AccountPrompt button:hover{
+    background-color: red;
+    color: white;
+}
+
+
+
+
+
+
 /*---------------------------------PROFILEVIEW--------------------------------------*/
+
+
+.ProfileView{
+    position: relative;
+    top: 150px;
+    bottom: 0px;
+    left: 250px;
+    right: 0px;
+    height: 300px;
+    width: 800px;
+
+    background-color: rgb(28, 28, 28);
+    border-radius: 10px;
+}
+
+.ProfileView img{
+    position: absolute;
+    top: 45px;
+    bottom: 0px;
+    left: 50px;
+    right: 0px;
+    width: 200px; 
+    height: 200px;
+
+    border: 8px;
+    border-color: red;
+    border-radius: 200%;
+    border-style: solid;
+    background-color: red;
+}
+
+.profileUsername{
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 350px;
+    right: 0px;
+
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: red;
+}
+
+.profileBio{
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    bottom: 0px;
+    left: 300px;
+    right: 0px;
+    width: 250px;
+    height: min-content;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    color: red;
+}
+
+.ProfileView button{
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    left: 650px;
+    right: 0px;
+
+    margin: 1rem;
+    padding: 5px;
+
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    display: inline-block;
+    background-color: rgb(28, 28, 28);
+    border: 3px solid red;
+    border-radius: 3px;
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+.ProfileView button:hover{
+    background-color: red;
+    color: white;
+}
+
+
+
+
+
 /*---------------------------------MAINVIEW-----------------------------------------*/
+
+
+.MainView{
+    position: relative;
+    top: 200px;
+    bottom: 100px;
+    left: 140px;
+    right: 0px;
+    height: min-content;
+    width: 1000px;
+    padding-bottom: 100px;
+    border-bottom: 100px;
+    margin-bottom: 100px;
+    
+
+    background-color: rgb(28, 28, 28);
+    border-radius: 10px;
+}
+
+.filterBar{
+    position: relative;
+    top: 20px;
+    bottom: 0px;
+    left: 0;
+    right: 0px;
+    height: 60px;
+
+    background-color: rgb(28, 28, 28);
+}
+
+.filterButton{
+    position: relative;
+    top: 15px;
+    bottom: 0px;
+    left: 275px;
+    right: 0px;
+    margin-left: 30px;
+
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    display: inline-block;
+    background-color: rgb(28, 28, 28);
+    border: 3px solid red;
+    border-radius: 3px;
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+.ProfileView button:hover{
+    background-color: red;
+    color: white;
+}
+
+
+
+
+
+
 /*---------------------------------CARDS--------------------------------------------*/
+
+
+.cardGrid{
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    top: 25px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: min-content;
+
+    background-color: rgb(28, 28, 28);
+}
+
+.listCard{
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    left: 85px;
+    right: 0px;
+    width: 200px;
+    margin: 10px;
+    
+    padding: 25px;
+
+    background: grey;
+    border: 3px solid red;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
+
+
+    transition: transform .2s;
+}
+
+.listCard h3{
+    position: relative;
+    bottom: 30px;
+    text-align: center;
+    
+    color: rgb(28, 28, 28);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.listCard p{
+    position: relative;
+    bottom: 30px;
+    text-align: center;
+    margin: 0px;
+
+    font-size: 70px;
+    /* font-weight: 900; */
+}
+
+#createButtonL h3{
+    position: relative;
+    bottom: 30px;
+    text-align: center;
+    
+    color: rgb(28, 28, 28);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+  
+.mediumCard{
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    left: 85px;
+    right: 0px;
+    width: 200px;
+    margin: 10px;
+    
+    padding: 25px;
+
+    background: grey;
+    border: 3px solid red;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
+
+
+    transition: transform .2s;
+}
+
+.mediumCard h3{
+    position: relative;
+    bottom: 15px;
+    text-align: center;
+    
+    color: rgb(28, 28, 28);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.mediumCard p{
+    position: relative;
+    bottom: 30px;
+    text-align: center;
+    
+    color: rgb(28, 28, 28);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.mediumCard img{
+    position: relative;
+    top: 5px;
+    left: 25px;
+    width: "150px"; 
+    height: "200px";
+
+    border: 3px;
+    border-color: rgb(28, 28, 28);
+    border-radius: 5px;
+    border-style: solid;
+    background-color: rgb(28, 28, 28);
+}
+
+#medButtonE{
+    position: absolute;
+    top: 380px;
+    left: 20px;
+}
+
+#medButtonD{
+    position: absolute;
+    top: 380px;
+    left: 120px;
+}
+
+.cardButton{
+    position: relative;
+    top: 15px;
+    margin-left: 25px;
+
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    display: inline-block;
+    background-color: rgb(28, 28, 28);
+    border: 3px solid red;
+    border-radius: 3px;
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+#createButtonM{
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    left: 85px;
+    right: 0px;
+    width: 200px;
+    margin: 10px;
+    
+    padding: 25px;
+
+    background: grey;
+    border: 3px solid red;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
+
+
+    transition: transform .2s;
+}
+
+#createButtonM h3{
+    position: relative;
+    bottom: 30px;
+    text-align: center;
+    
+    color: rgb(28, 28, 28);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+#createButtonM p{
+    position: relative;
+    bottom: 35px;
+    text-align: center;
+
+    font-size: 80px;
+}
+
+
+
+
+
+
+
 /*---------------------------------FORMS--------------------------------------------*/
 .form{
     border-radius: 5px;

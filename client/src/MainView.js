@@ -51,7 +51,7 @@ function MainView({ user, setFormView, setFormFilter, selectedList, setSelectedL
     
 
     return (
-        <div className="mainView">
+        <div className="MainView">
             {listView ? (
                 <>
                     <div className="filterBar">
@@ -74,23 +74,24 @@ function MainView({ user, setFormView, setFormFilter, selectedList, setSelectedL
                                 />
                             )
                         })}
-                        <button className="createButton" onClick={() => {
+                        <div className="listCard" id="createButtonL" onClick={() => {
                             setFormView(true)
                             setFormFilter("CREATE_LIST")
                         }}>
-                            Create New List
-                        </button>
+                            <h3>Create New List</h3>
+                            <p>➕</p>
+                        </div>
                     </div>
                 </>
             ) : (
                 <>
                     <div className="filterBar">
-                        <button className="backButton" onClick={() => setListView(true)}>Lists</button>
+                        <button className="filterButton" onClick={() => setListView(true)}>Lists</button>
                         <button className="filterButton" onClick={() => filterMedia("ALL")}>All</button>
                         <button className="filterButton" onClick={() => filterMedia("PENDING")}>Pending</button>
                         <button className="filterButton" onClick={() => filterMedia("COMPLETE")}>Complete</button>
                     </div>
-                    <div className={"cardGrid"}>
+                    <div className="cardGrid">
                         {media.map((medium) => {
                             return <MediumCard 
                                 key={medium.id} 
@@ -100,12 +101,13 @@ function MainView({ user, setFormView, setFormFilter, selectedList, setSelectedL
                                 setFormFilter={setFormFilter}
                             />
                         })}
-                        <button className="createButton" onClick={() => {
+                        <div  id="createButtonM" onClick={() => {
                             setFormView(true)
                             setFormFilter("CREATE_MEDIUM")
                         }}>
-                            Create New Medium
-                        </button>
+                            <h3>Create New Medium</h3>
+                            <p>➕</p>
+                        </div>
                     </div>
                 </>
             )}  

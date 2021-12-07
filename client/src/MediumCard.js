@@ -20,23 +20,23 @@ function MediumCard({ medium, setSelectedMedium, setFormView, setFormFilter }) {
 
     return (
         <div className="mediumCard">
-            <h3>{medium.title}</h3>
-            <p>{medium.studio}</p>
-            <p>{medium.medium_type}</p>
             <img 
                 className="mediumImage" 
                 src={medium.image} 
-                style={{width: "100px", height: "50px"}} 
+                style={{width: "150px", height: "200px"}} 
                 alt={medium.title}
             />
-            <button className="cardButton" onClick={() => {
+            <h3>{medium.title}</h3>
+            <p>{medium.studio}</p>
+            <p>{medium.medium_type}</p>
+            <button className="cardButton" id="medButtonE" onClick={() => {
                 setFormView(true)
                 setFormFilter("PATCH_MEDIUM")
                 setSelectedMedium(medium)
             }}>
                 Edit
             </button>
-            <button className="cardButton" onClick={handleDelete}>Delete</button>
+            <button className="cardButton" id="medButtonD" onClick={handleDelete}>Delete</button>
         </div>
     )
 }
