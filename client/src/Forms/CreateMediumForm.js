@@ -36,6 +36,7 @@ function CreateMediumForm({ selectedList, setFormView }) {
         const data = await response.json();
         if (response.ok) {
           console.log("Medium created:", data);
+          //window.location.reload(false);
           setFormView(false);
           //afterCreateRecipe();
         } else {
@@ -47,6 +48,7 @@ function CreateMediumForm({ selectedList, setFormView }) {
 
     return (
         <div className="form">
+            <button className="formButton" onClick={()=>setFormView(false)}>Cancel</button>
             <h2>Create A New Medium!</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Title:</label>

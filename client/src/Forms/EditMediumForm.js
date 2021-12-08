@@ -27,12 +27,14 @@ function EditMediumForm({ selectedMedium, setFormView }) {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
+            window.location.reload(false);
             setFormView(false);
         });
     };
 
     return (
         <div className="form">
+            <button className="formButton" onClick={()=>setFormView(false)}>Cancel</button>
             <h2>Edit List!</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="newTitle">New Title:</label>

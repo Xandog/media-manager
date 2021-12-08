@@ -9,10 +9,10 @@ function MediumCard({ medium, setSelectedMedium, setFormView, setFormFilter }) {
         })
         .then((response) => {
             if (response.ok) {
-                console.log(response)
-                // afterDelete();
+                console.log(response);
+                window.location.reload(false);
             } else {
-                console.log(response)
+                console.log(response);
             }
         });
     };
@@ -24,7 +24,7 @@ function MediumCard({ medium, setSelectedMedium, setFormView, setFormFilter }) {
             <img 
                 className="mediumImage" 
                 src={medium.image} 
-                alt={medium.title}
+                alt="https://www.flexx.co/assets/camaleon_cms/image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef.png"
             />
             <h3>{medium.title}</h3>
             <p>{medium.studio}</p>

@@ -34,8 +34,8 @@ function CreateListForm({ user, setFormView }) {
         const data = await response.json();
         if (response.ok) {
           console.log("List created:", data);
+          window.location.reload(false);
           setFormView(false);
-          //afterCreateRecipe();
         } else {
             console.log(response);
         };
@@ -45,6 +45,7 @@ function CreateListForm({ user, setFormView }) {
 
     return (
         <div className="form">
+            <button className="formButton" onClick={()=>setFormView(false)}>Cancel</button>
             <h2>Create A New List!</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Title:</label>

@@ -6,7 +6,6 @@ function ProfileView({ user, setFormView, setFormFilter }) {
             <img 
                 className="profilePic" 
                 src={user.profile_pic} 
-                // style={{width: "200px", height: "150px"}} 
                 alt={user.username}
             />
             <p className="profileUsername">{user.username}</p>

@@ -10,8 +10,8 @@ function ListCard({ list, setSelectedList, setListView, setMedia, setFormView, s
         .then((response) => {
             if(response.ok) {
                 response.json().then((list) => {
-                    setSelectedList(list)
-                    setMedia(list.media)
+                    setSelectedList(list);
+                    setMedia(list.media);
                     setListView(false);
                 });
             } else {
@@ -27,10 +27,10 @@ function ListCard({ list, setSelectedList, setListView, setMedia, setFormView, s
         })
         .then((response) => {
             if (response.ok) {
-                console.log(response)
-                // afterDelete();
+                console.log(response);
+                window.location.reload(false);
             } else {
-                console.log(response)
+                console.log(response);
             }
         });
     };

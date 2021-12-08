@@ -18,6 +18,8 @@ function SignupForm({ setUser }) {
         username,
         password,
         password_confirmation: passwordConfirmation,
+        profile_pic: "https://www.sibberhuuske.nl/wp-content/uploads/2016/10/default-avatar.png",
+        bio: "Your bio goes here!"
       }),
     })
     .then((response) => {

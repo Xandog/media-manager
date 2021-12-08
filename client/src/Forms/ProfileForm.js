@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 function ProfileForm({ user, setUser, setFormView}) {
 
-    const [newProfile_pic, setNewProfile_pic] = useState("");
-    const [newBio, setNewBio] = useState("");
+    const [newProfile_pic, setNewProfile_pic] = useState(`${user.profile_pic}`);
+    const [newBio, setNewBio] = useState(`${user.bio}`);
 
 
     //Submit handler for signup:
@@ -27,6 +27,7 @@ function ProfileForm({ user, setUser, setFormView}) {
 
     return (
         <div className="form">
+            <button className="formButton" onClick={()=>setFormView(false)}>Cancel</button>
             <h2>Edit Profile!</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="newProfile_pic">Profile Picture:</label>
