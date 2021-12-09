@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
     validates :username, presence: true
     validates :username, uniqueness: true
-    validates :username, length: {maximum: 15}
-    # validates :bio, presence: true
+    validates :username, length: {maximum: 10}
+    validates :bio, length: {maximum: 100}
     # validates :profile_pic, presence: true
 end

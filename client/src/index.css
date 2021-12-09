@@ -3,6 +3,9 @@
 
 body{
     background-color: grey;
+    background-image: url(./Backgrounds/shapelined-_JBKdviweXI-unsplash.jpg);
+    /* background-image: url(./Backgrounds/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg); */
+    background-size: cover;
 }
 
 button:hover{
@@ -52,8 +55,8 @@ input[type=submit]:hover{
 
 .userGreeting{
     position: absolute;
-    left: 78%;
-    top: 9%;
+    left: 5%;
+    top: 8%;
 
     font-size: 25px;
     font-family: fantasy, cursive;
@@ -189,6 +192,7 @@ div.AccountPrompt button:hover{
     right: 0px;
     width: 250px;
     height: min-content;
+    word-wrap: break-word;
     padding: 10px;
     margin: 0;
 
