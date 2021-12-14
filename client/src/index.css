@@ -33,8 +33,8 @@ input[type=submit]:hover{
     width: 100%;
     height: 80px;
 
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
     position: fixed;
     display: flex;
     padding: 5px 0;
@@ -81,6 +81,47 @@ input[type=submit]:hover{
     text-decoration: none;
     color: red;
     cursor: pointer;
+}
+
+
+
+
+
+
+/*---------------------------------FOOTER-------------------------------------------*/
+
+
+.Footer{
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    position: fixed;
+    display: flex;
+    padding: 5px 0;
+    background-color: rgb(28, 28, 28);
+    box-shadow: 0 0 10px rgba(0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
+}
+
+.Footer p{
+    position: absolute;
+    left: 10px;
+
+    color: red;
+    font-family: 'Outfit', sans-serif;
+}
+
+.Footer a{
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+
+    color: red;
+    font-family: 'Outfit', sans-serif;
 }
 
 
@@ -515,6 +556,7 @@ div.AccountPrompt button:hover{
     margin: 10% 30% 10% 30%;
 
     background-color: rgb(28, 28, 28);
+    box-shadow: 0 0 10px rgba(0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
 }
 
 .formButton{
