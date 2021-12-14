@@ -9,7 +9,6 @@ function EditMediumForm({ selectedMedium, setFormView }) {
     const [newImage, setNewImage] = useState("");
 
 
-    //Submit handler for signup:
     function handleSubmit(e) {
 
         e.preventDefault();
