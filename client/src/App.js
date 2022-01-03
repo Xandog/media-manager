@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 //Main Components
 import NavBar from "./NavBar";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import AccountPrompt from "./AccountPrompt";
 import ProfileView from "./ProfileView";
 import MainView from "./MainView";
@@ -63,7 +63,7 @@ function App() {
         user={user}
         setUser={setUser}
       />
-      <Footer/>
+      {/* <Footer/> */}
       {!user ? (
         <AccountPrompt
         user={user}
